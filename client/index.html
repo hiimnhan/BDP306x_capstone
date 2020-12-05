@@ -29,10 +29,9 @@
               <span class="selected-target" id="selected-src-symbol">Loading...</span>
               <div class="dropdown__triangle"></div>
             </div>
-            <div class="dropdown__content"></div>
+            <div class="dropdown__content--src"></div>
           </div>
-          <input class="input-item" id="swap-source-amount" type="number" onkeydown="javascript: return event.keyCode === 8 ||
-          event.keyCode === 46 ? true : !isNaN(Number(event.key))" placeholder="0"/>
+          <input class="input-item" id="swap-source-amount" type="number" onkeypress="return isNumberKey(event)" placeholder="0"/>
         </div>
       </div>
 
@@ -46,15 +45,14 @@
               <span class="selected-target" id="selected-dest-symbol">Loading...</span>
               <div class="dropdown__triangle"></div>
             </div>
-            <div class="dropdown__content">
-            </div>
+            <div class="dropdown__content--dest"></div>
           </div>
           <div class="input-placeholder">0</div>
         </div>
         <div class="swap__rate">1 <span id="rate-src-symbol">Loading...</span> = <span id="exchange-rate">Loading...</span> <span id="rate-dest-symbol">Loading...</span></div>
       </div>
 
-      <div class="button modal-trigger" data-modal-id="confirm-swap-modal" id="swap-button">Swap Now</div>
+      <button class="button modal-trigger" data-modal-id="confirm-swap-modal" id="swap-button">Swap Now</button>
     </div>
 
     <div class="transfer" id="transfer">
@@ -109,13 +107,24 @@
   <div class="modal__content">
     <div class="modal__title">CONFIRM SWAP</div>
     <div class="exchange-banner">
-      <span class="token">1 TOMO</span>
+      <span class="token">
+        <span class="" id="modal-src-amount"></span>
+        <span class="modal-src-token">ETH</span>
+      </span>
       <img src="./assets/images/icons/swap.svg" alt="arrow" srcset="">
-      <span class="token">0.29 CONST</span>
+      <span class="token">
+        <span class="" id="modal-dest-amount">0.29</span>
+        <span class="modal-dest-token">SFL</span>
+      </span>
     </div>
     <div class="info-banner">
-      <div class="rate">1 TOMO = 0.29 CONST</div>
-      <div class="gas-fee">GAS fee: 0.000268197 TOMO</div>
+      <div class="rate">
+        1 
+        <span class="modal-src-token">ETH</span>
+        =
+        <span class="modal-dest-rate">160</span>
+        <span class="modal-dest-token">SFL</span>
+      </div>
     </div>
     <div class="button-container">
       <div class="button button-cancel">Cancel</div>
@@ -124,6 +133,27 @@
   </div>
 </div>
 
+<script>
+  function isNumberKey(evt){
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode == 46){
+        var inputValue = $("#floor").val();
+        var count = (inputValue.match(/'.'/g) || []).length;
+        if(count<1){
+            if (inputValue.indexOf('.') < 1){
+                return true;
+            }
+            return false;
+        }else{
+            return false;
+        }
+    }
+    if (charCode != 46 && charCode > 31 && (charCode < 48 || charCode > 57)){
+        return false;
+    }
+    return true;
+}
+</script>
 <script src="index.js"></script>
 </body>
 </html>

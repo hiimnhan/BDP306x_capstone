@@ -1,23 +1,24 @@
-var Token = artifacts.require("./Token.sol");
+
 var Reserve = artifacts.require("./Reserve.sol");
 var Exchange = artifacts.require('./Exchange.sol');
 
 module.exports = async function (deployer) {
-    const sflToken = await deployer.deploy(Token, 2000000, 'Sunflower', 'SFL', 4);
-    const sflAddr = Token.address;
+    await deployer.deploy(Reserve, 160, 178, 2000000, 'SUNFLOWER', 'SFL', 4);
+    const sflAddr = Reserve.address;
+    const sflRes = await Reserve.at(sflAddr);
 
-    const sflReserve = await deployer.deploy(Reserve, 200*10000, 210*10000, sflAddr);
-    const sflReserveAdrr = sflReserve.address;
+    const sflToken = await sflRes._token().then(res => res);
+    console.log('sflToken', sflToken);
 
-    const dsyToken = await deployer.deploy(Token, 2000000, 'Daisy', 'DSY', 4);
-    const dsyAddr = dsyToken.address;
-    const dsyBalance = await dsyToken.totalSupply().then(res => res.words[0]);
-    console.log('dsy ba', dsyBalance);
+    await deployer.deploy(Reserve, 210, 223, 2000000, 'DAISY', 'DSY', 4);
+    const dsyAddr = Reserve.address;
+    const dsyRes = await Reserve.at(dsyAddr);
 
-    const dsyReserve = await deployer.deploy(Reserve, 100*10000, 120*10000, dsyAddr);
+    const dsyToken = await dsyRes._token().then(res => res);
+    console.log('dsyToken', dsyToken);
 
-    await dsyToken.transfer(dsyReserve.address, dsyBalance - 10000);
-    const dsyReserveBalance = await dsyReserve.getTokenBalance().then(res => console.log('balance re dsy', res.words[0]));
-
+    const exchange = await deployer.deploy(Exchange);
+    await exchange.modifyReserveMap(sflAddr, true);
+    await exchange.modifyReserveMap(dsyAddr, true);
 
 }

@@ -8,15 +8,19 @@ contract Reserve {
     uint256 _sellRate;
     bool _tradeEnabled;
 
+
     event Exchanged(address sender, uint256 amount);
 
     constructor(
         uint256 buyRate,
         uint256 sellRate,
-        Token token
+        uint256 totalSupply,
+        string memory name,
+        string memory symbol,
+        uint32 decimals
     ) public {
         _owner = msg.sender;
-        _token = token;
+        _token = new Token(totalSupply, name, symbol, decimals);
         _buyRate = buyRate;
         _sellRate = sellRate;
         _tradeEnabled = true;
@@ -27,13 +31,14 @@ contract Reserve {
         _;
     }
 
-    function convertEthToTokenByRate(uint256 amount, uint256 buyRate) public view returns (uint256) {
+    function convertEthToTokenByRate(uint256 amount, uint256 buyRate) public pure returns (uint256) {
         return amount * buyRate / 1e18;
+
     }
 
     // convert from token to eth by sell rate
     // amount * ether / sell rate
-    function convertTokenToEthByRate(uint256 amount, uint256 sellRate) public view returns (uint256) {
+    function convertTokenToEthByRate(uint256 amount, uint256 sellRate) public pure returns (uint256) {
         return amount * 1e18 / sellRate;
     }
 

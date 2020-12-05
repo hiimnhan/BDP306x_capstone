@@ -18,3 +18,8 @@ export function getExchangeContract() {
   const web3 = getWeb3Instance();
   return new web3.eth.Contract(EnvConfig.EXCHANGE_CONTRACT_ABI, EnvConfig.EXCHANGE_CONTRACT_ADDRESS);
 }
+
+export function getReserveContract(address) {
+  const web3 = getWeb3Instance();
+  return new web3.eth.Contract(EnvConfig.RESERVE_CONTRACT_ABI, address);
+}

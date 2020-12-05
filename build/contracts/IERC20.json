@@ -196,15 +196,9 @@
   "ast": {
     "absolutePath": "/Users/nhanncv/Desktop/Summer2020/Blockchain/Capstone/contracts/Token.sol",
     "exportedSymbols": {
-      "ERC20Token": [
-        460
-      ],
-      "IERC20": [
-        101
-      ],
-      "SafeMath": [
-        214
-      ]
+      "ERC20Token": [460],
+      "IERC20": [101],
+      "SafeMath": [214]
     },
     "id": 461,
     "license": null,
@@ -212,12 +206,7 @@
     "nodes": [
       {
         "id": 34,
-        "literals": [
-          "solidity",
-          "<",
-          "0.8",
-          ".0"
-        ],
+        "literals": ["solidity", "<", "0.8", ".0"],
         "nodeType": "PragmaDirective",
         "src": "0:23:1"
       },
@@ -229,9 +218,7 @@
         "documentation": null,
         "fullyImplemented": false,
         "id": 101,
-        "linearizedBaseContracts": [
-          101
-        ],
+        "linearizedBaseContracts": [101],
         "name": "IERC20",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -1095,9 +1082,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 214,
-        "linearizedBaseContracts": [
-          214
-        ],
+        "linearizedBaseContracts": [214],
         "name": "SafeMath",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -1108,9 +1093,7 @@
               "src": "1599:109:1",
               "statements": [
                 {
-                  "assignments": [
-                    111
-                  ],
+                  "assignments": [111],
                   "declarations": [
                     {
                       "constant": false,
@@ -1272,10 +1255,7 @@
                       "id": 116,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        -18,
-                        -18
-                      ],
+                      "overloadedDeclarations": [-18, -18],
                       "referencedDeclaration": -18,
                       "src": "1636:7:1",
                       "typeDescriptions": {
@@ -1442,9 +1422,7 @@
               "src": "1781:109:1",
               "statements": [
                 {
-                  "assignments": [
-                    136
-                  ],
+                  "assignments": [136],
                   "declarations": [
                     {
                       "constant": false,
@@ -1606,10 +1584,7 @@
                       "id": 141,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        -18,
-                        -18
-                      ],
+                      "overloadedDeclarations": [-18, -18],
                       "referencedDeclaration": -18,
                       "src": "1818:7:1",
                       "typeDescriptions": {
@@ -1925,9 +1900,7 @@
                   }
                 },
                 {
-                  "assignments": [
-                    171
-                  ],
+                  "assignments": [171],
                   "declarations": [
                     {
                       "constant": false,
@@ -2121,10 +2094,7 @@
                       "id": 176,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        -18,
-                        -18
-                      ],
+                      "overloadedDeclarations": [-18, -18],
                       "referencedDeclaration": -18,
                       "src": "2042:7:1",
                       "typeDescriptions": {
@@ -2377,10 +2347,7 @@
                       "id": 197,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        -18,
-                        -18
-                      ],
+                      "overloadedDeclarations": [-18, -18],
                       "referencedDeclaration": -18,
                       "src": "2207:7:1",
                       "typeDescriptions": {
@@ -2408,9 +2375,7 @@
                   "src": "2207:44:1"
                 },
                 {
-                  "assignments": [
-                    205
-                  ],
+                  "assignments": [205],
                   "declarations": [
                     {
                       "constant": false,
@@ -2649,17 +2614,12 @@
             "src": "2331:6:1"
           }
         ],
-        "contractDependencies": [
-          101
-        ],
+        "contractDependencies": [101],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
         "id": 460,
-        "linearizedBaseContracts": [
-          460,
-          101
-        ],
+        "linearizedBaseContracts": [460, 101],
         "name": "ERC20Token",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -3450,10 +3410,7 @@
                       "id": 282,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        -18,
-                        -18
-                      ],
+                      "overloadedDeclarations": [-18, -18],
                       "referencedDeclaration": -18,
                       "src": "3074:7:1",
                       "typeDescriptions": {
@@ -4306,9 +4263,7 @@
             "visibility": "internal"
           },
           {
-            "baseFunctions": [
-              39
-            ],
+            "baseFunctions": [39],
             "body": {
               "id": 352,
               "nodeType": "Block",
@@ -4397,9 +4352,7 @@
             "visibility": "public"
           },
           {
-            "baseFunctions": [
-              46
-            ],
+            "baseFunctions": [46],
             "body": {
               "id": 365,
               "nodeType": "Block",
@@ -4545,9 +4498,7 @@
             "visibility": "public"
           },
           {
-            "baseFunctions": [
-              55
-            ],
+            "baseFunctions": [55],
             "body": {
               "id": 385,
               "nodeType": "Block",
@@ -4804,9 +4755,7 @@
             "visibility": "public"
           },
           {
-            "baseFunctions": [
-              64
-            ],
+            "baseFunctions": [64],
             "body": {
               "id": 402,
               "nodeType": "Block",
@@ -5008,9 +4957,7 @@
             "visibility": "public"
           },
           {
-            "baseFunctions": [
-              73
-            ],
+            "baseFunctions": [73],
             "body": {
               "id": 422,
               "nodeType": "Block",
@@ -5267,9 +5214,7 @@
             "visibility": "public"
           },
           {
-            "baseFunctions": [
-              84
-            ],
+            "baseFunctions": [84],
             "body": {
               "id": 458,
               "nodeType": "Block",
@@ -5776,15 +5721,9 @@
   "legacyAST": {
     "absolutePath": "/Users/nhanncv/Desktop/Summer2020/Blockchain/Capstone/contracts/Token.sol",
     "exportedSymbols": {
-      "ERC20Token": [
-        460
-      ],
-      "IERC20": [
-        101
-      ],
-      "SafeMath": [
-        214
-      ]
+      "ERC20Token": [460],
+      "IERC20": [101],
+      "SafeMath": [214]
     },
     "id": 461,
     "license": null,
@@ -5792,12 +5731,7 @@
     "nodes": [
       {
         "id": 34,
-        "literals": [
-          "solidity",
-          "<",
-          "0.8",
-          ".0"
-        ],
+        "literals": ["solidity", "<", "0.8", ".0"],
         "nodeType": "PragmaDirective",
         "src": "0:23:1"
       },
@@ -5809,9 +5743,7 @@
         "documentation": null,
         "fullyImplemented": false,
         "id": 101,
-        "linearizedBaseContracts": [
-          101
-        ],
+        "linearizedBaseContracts": [101],
         "name": "IERC20",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -6675,9 +6607,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 214,
-        "linearizedBaseContracts": [
-          214
-        ],
+        "linearizedBaseContracts": [214],
         "name": "SafeMath",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -6688,9 +6618,7 @@
               "src": "1599:109:1",
               "statements": [
                 {
-                  "assignments": [
-                    111
-                  ],
+                  "assignments": [111],
                   "declarations": [
                     {
                       "constant": false,
@@ -6852,10 +6780,7 @@
                       "id": 116,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        -18,
-                        -18
-                      ],
+                      "overloadedDeclarations": [-18, -18],
                       "referencedDeclaration": -18,
                       "src": "1636:7:1",
                       "typeDescriptions": {
@@ -7022,9 +6947,7 @@
               "src": "1781:109:1",
               "statements": [
                 {
-                  "assignments": [
-                    136
-                  ],
+                  "assignments": [136],
                   "declarations": [
                     {
                       "constant": false,
@@ -7186,10 +7109,7 @@
                       "id": 141,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        -18,
-                        -18
-                      ],
+                      "overloadedDeclarations": [-18, -18],
                       "referencedDeclaration": -18,
                       "src": "1818:7:1",
                       "typeDescriptions": {
@@ -7505,9 +7425,7 @@
                   }
                 },
                 {
-                  "assignments": [
-                    171
-                  ],
+                  "assignments": [171],
                   "declarations": [
                     {
                       "constant": false,
@@ -7701,10 +7619,7 @@
                       "id": 176,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        -18,
-                        -18
-                      ],
+                      "overloadedDeclarations": [-18, -18],
                       "referencedDeclaration": -18,
                       "src": "2042:7:1",
                       "typeDescriptions": {
@@ -7957,10 +7872,7 @@
                       "id": 197,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        -18,
-                        -18
-                      ],
+                      "overloadedDeclarations": [-18, -18],
                       "referencedDeclaration": -18,
                       "src": "2207:7:1",
                       "typeDescriptions": {
@@ -7988,9 +7900,7 @@
                   "src": "2207:44:1"
                 },
                 {
-                  "assignments": [
-                    205
-                  ],
+                  "assignments": [205],
                   "declarations": [
                     {
                       "constant": false,
@@ -8229,17 +8139,12 @@
             "src": "2331:6:1"
           }
         ],
-        "contractDependencies": [
-          101
-        ],
+        "contractDependencies": [101],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
         "id": 460,
-        "linearizedBaseContracts": [
-          460,
-          101
-        ],
+        "linearizedBaseContracts": [460, 101],
         "name": "ERC20Token",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -9030,10 +8935,7 @@
                       "id": 282,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        -18,
-                        -18
-                      ],
+                      "overloadedDeclarations": [-18, -18],
                       "referencedDeclaration": -18,
                       "src": "3074:7:1",
                       "typeDescriptions": {
@@ -9886,9 +9788,7 @@
             "visibility": "internal"
           },
           {
-            "baseFunctions": [
-              39
-            ],
+            "baseFunctions": [39],
             "body": {
               "id": 352,
               "nodeType": "Block",
@@ -9977,9 +9877,7 @@
             "visibility": "public"
           },
           {
-            "baseFunctions": [
-              46
-            ],
+            "baseFunctions": [46],
             "body": {
               "id": 365,
               "nodeType": "Block",
@@ -10125,9 +10023,7 @@
             "visibility": "public"
           },
           {
-            "baseFunctions": [
-              55
-            ],
+            "baseFunctions": [55],
             "body": {
               "id": 385,
               "nodeType": "Block",
@@ -10384,9 +10280,7 @@
             "visibility": "public"
           },
           {
-            "baseFunctions": [
-              64
-            ],
+            "baseFunctions": [64],
             "body": {
               "id": 402,
               "nodeType": "Block",
@@ -10588,9 +10482,7 @@
             "visibility": "public"
           },
           {
-            "baseFunctions": [
-              73
-            ],
+            "baseFunctions": [73],
             "body": {
               "id": 422,
               "nodeType": "Block",
@@ -10847,9 +10739,7 @@
             "visibility": "public"
           },
           {
-            "baseFunctions": [
-              84
-            ],
+            "baseFunctions": [84],
             "body": {
               "id": 458,
               "nodeType": "Block",

@@ -117,7 +117,11 @@ input[type='number']::-webkit-outer-spin-button {
 .dropdown--active {
 }
 
-.dropdown--active .dropdown__content {
+.dropdown--active .dropdown__content--src {
+  display: block;
+}
+
+.dropdown--active .dropdown__content--dest {
   display: block;
 }
 
@@ -144,7 +148,8 @@ input[type='number']::-webkit-outer-spin-button {
   transition: all 0.3s;
 }
 
-.dropdown__content {
+.dropdown__content--src,
+.dropdown__content--dest {
   display: none;
   position: absolute;
   background: white;
@@ -156,17 +161,20 @@ input[type='number']::-webkit-outer-spin-button {
   font-weight: 500;
 }
 
-.dropdown__item {
+.dropdown__item--src,
+.dropdown__item--dest {
   margin-bottom: 6px;
   cursor: pointer;
   transition: all 0.3s;
 }
 
-.dropdown__item:hover {
+.dropdown__item--src:hover,
+.dropdown__item--dest:hover {
   color: #3dbeff;
 }
 
-.dropdown__item:last-child {
+.dropdown__item--src:last-child,
+.dropdown__item--dest:last-child {
   margin-bottom: 0;
 }
 /*========= End Dropdown =========*/

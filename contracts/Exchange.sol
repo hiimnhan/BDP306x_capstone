@@ -18,30 +18,39 @@ contract Exchange {
         _;
     }
 
-    function convertEthToTokenByRate(uint256 amount, uint256 buyRate) public view returns (uint256) {
+    function convertEthToTokenByRate(uint256 amount, uint256 buyRate) public pure returns (uint256) {
         return amount * buyRate / 1e18;
     }
 
     // convert from token to eth by sell rate
     // amount * ether / sell rate
-    function convertTokenToEthByRate(uint256 amount, uint256 sellRate) public view returns (uint256) {
+    function convertTokenToEthByRate(uint256 amount, uint256 sellRate) public pure returns (uint256) {
         return amount * 1e18 / sellRate;
     }
 
     // add/remove reserve
-    function modifyReserveMap(Reserve reserve, Token token, bool isAdd) public  onlyOwner {
+    function modifyReserveMap(address reserveAddr,bool isAdd) public  onlyOwner {
+        Reserve res = Reserve(reserveAddr);
         if (isAdd) {
-            reserves[token] = reserve;
+            reserves[res._token()] = res;
         } else {
-            delete reserves[token];
+            delete reserves[res._token()];
         }
     }
 
     // get Exchange Rate
-    function getExchangeRate(Token srcToken, Token destToken) public view returns (uint256) {
+    function getExchangeRate(Token srcToken, Token destToken) public view returns (uint256[2] memory) {
         // srcToken -> ETH -> destToken
         // rate = buyrate dest / sellrate src
-        return reserves[destToken].getExchangeRate(true) / reserves[srcToken].getExchangeRate(false);
+        uint256 srcRate = reserves[destToken].getExchangeRate(true);
+        uint256 destRate = reserves[srcToken].getExchangeRate(false);
+
+        uint256[2] memory rates;
+        rates[0] = srcRate;
+        rates[1] = destRate;
+
+        return rates;
+        
     }
 
     function exchangeBetweenTokens(Token srcToken, Token destToken, uint256 srcAmount) public payable {
