@@ -99,6 +99,8 @@ input[type='number']::-webkit-outer-spin-button {
   background-size: auto 150%;
   cursor: pointer;
   transition: all 0.3s;
+  border: 0;
+  outline: none;
 }
 
 .button:hover {

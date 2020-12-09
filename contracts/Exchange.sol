@@ -55,7 +55,7 @@ contract Exchange {
 
     function exchangeBetweenTokens(Token srcToken, Token destToken, uint256 srcAmount) public payable {
         require(srcAmount > 0, "Exchange Token -> Token: Amount must be bigger than 0");
-        require(msg.value == srcAmount);
+        // require(msg.value == srcAmount, "Exchange Token -> Token: msg.value != value");
         // dest amount  = src * buy rate A / 1e18
         uint256 destAmount = convertEthToTokenByRate(srcAmount, reserves[srcToken].getExchangeRate(true));
         // sell token a -> eth
@@ -69,7 +69,7 @@ contract Exchange {
 
     function exchangeEthToToken(Token token, uint256 amount) public payable {
         require(amount > 0, "Exchange Eth -> Token: Amount must be bigger than 0");
-        require(msg.value == amount);
+        // require(msg.value == amount, "Exchange Eth -> Token: msg.value != amount");
 
         reserves[token].exchange(true, amount);
         token.transfer(msg.sender, token.balanceOf(address(this)));

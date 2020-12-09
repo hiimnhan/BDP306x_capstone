@@ -35,7 +35,7 @@ contract Token is IERC20 {
         uint256 amount
     ) internal {
         require(
-            amount < _balances[from],
+            amount > _balances[from],
             "Error: balances is not enough to operate"
         );
         _balances[from] = _balances[from].sub(amount);

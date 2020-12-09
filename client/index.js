@@ -120,6 +120,7 @@ $(function () {
   function exchangeToken(srcSymbol, destSymbol, amount) {
     const srcToken = findTokenBySymbol(srcSymbol);
     const destToken = findTokenBySymbol(destSymbol);
+    console.log('token', [srcToken, destToken]);
 
     exchangeTokens(srcToken.address, destToken.address, amount)
       .then(res=> console.log('exchange', res))

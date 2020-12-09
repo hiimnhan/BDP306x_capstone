@@ -49,6 +49,10 @@ export async function exchangeTokens(srcTokenAddress, destTokenAddress, amount) 
     console.log('actual', actualAmount);
     await exchangeContract.methods.exchangeEthToToken(destTokenAddress, actualAmount).call();
   }
+  else {
+    const actualAmount = amount * Math.pow(10,4);
+    await exchangeContract.methods.exchangeBetweenTokens(srcTokenAddress, destTokenAddress, amount).call();
+  }
 }
 
 export async function getTokenBalances(tokens, address) {

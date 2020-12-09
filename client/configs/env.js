@@ -1,5 +1,6 @@
 const EnvConfig = {
   RPC_ENDPOINT: 'https://ropsten.infura.io/v3/02f7439372744d5c8818a12e137a41b2',
+  // RPC_ENDPOINT: 'HTTP://127.0.0.1:8545',
   TOKEN_ABI:[
     {
       "inputs": [
@@ -394,7 +395,7 @@ const EnvConfig = {
       "payable": true
     }
   ],
-  EXCHANGE_CONTRACT_ADDRESS: '0xDCB633D1CBf6554faE504BFc9d450166b173d370',
+  EXCHANGE_CONTRACT_ADDRESS: '0x51f3a6be6B11E6e276F10E9328690163aB27F6F3',
 
   RESERVE_CONTRACT_ABI: [
     {
@@ -601,14 +602,14 @@ const EnvConfig = {
     {
       "name": 'SunflowerToken',
       "symbol": 'SFL',
-      address: '0xa03C11b4E4a8E1C91d7B9b8069c2E9850af01Fea',
-      reserveAddr: '0x0D723Dc49e3935DcE681Fd60A716E41fEEf11e43'
+      address: '0xa5421Dd4A9aA666BC12466dc3700327412CD6d2f',
+      reserveAddr: '0x24e012c746cAac94c63f6416eDcDf19Ec3bdc30d'
     },
     {
       "name": "DaisyToken",
       "symbol": "DSY",
-      address: "0x675F0DB69acd79acC95A85BE7Cba5A7D3E14088f",
-      reserveAddr: '0x71abD1D0C0B4Df9215B3a005a771B2cad0e49822' 
+      address: "0x039347549838878Dd6162f2bFE5581A6208E1Bf7",
+      reserveAddr: '0xb10DaeC1673E0Cac36709a54e0C664376E51A8b6' 
     }
     /* END TODO */
   ],
